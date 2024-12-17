@@ -22,7 +22,7 @@ public class ClienteController {
         return clienteService.salvarCliente(cliente);
     }
 
-    @GetMapping
+    @GetMapping("/clientes")
     public List<Cliente> listarClientes() {
         return clienteService.listarClientes();
     }

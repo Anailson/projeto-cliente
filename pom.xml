@@ -59,11 +59,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.7.3</version> <!-- Ou a versão mais recente -->
 		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<!-- Dependências para testes -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -54,7 +54,8 @@ public class ClienteServiceImpl implements ClienteServicePort {
     public void excluirLogicamenteCliente(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
-        cliente.setAtivo(false);
+        // Alterna o status de ativo/inativo
+        cliente.setAtivo(!cliente.isAtivo());
         clienteRepository.save(cliente);
     }
 }

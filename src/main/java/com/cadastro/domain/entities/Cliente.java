@@ -1,9 +1,9 @@
 package com.cadastro.domain.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Cliente {
@@ -16,6 +16,18 @@ public class Cliente {
     private String telefone;
     private int idade;
     private boolean ativo = true;  // Novo campo para exclusão lógica
+
+    @OneToMany(mappedBy = "cliente" ,cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Endereco> enderecos = new ArrayList<>();
+
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
 
     // Construtor padrão
     public Cliente() {

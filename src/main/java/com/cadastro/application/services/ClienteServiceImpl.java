@@ -45,8 +45,8 @@ public class ClienteServiceImpl implements ClienteServicePort {
                 .orElseThrow(() -> new ClienteNaoEncontradoException(id));
     }
 
-    @Override
     public List<Cliente> listarClientes() {
+        // Busca apenas os clientes ativos
         return clienteRepository.findAll();
     }
 

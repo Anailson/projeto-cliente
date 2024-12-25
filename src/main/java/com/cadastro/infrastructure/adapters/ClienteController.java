@@ -27,6 +27,7 @@ public class ClienteController {
         return clienteService.listarClientes();
     }
 
+
     @GetMapping("/BuscarRegistroId")
     public Cliente buscarClientePorId(@RequestParam Long id) {
         return clienteService.buscarClientePorId(id);

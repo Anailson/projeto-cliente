@@ -46,3 +46,7 @@ public class EnderecoServiceImpl implements EnderecoServicePort {
                 new RuntimeException("Endereço não encontrado com o ID: " + enderecoId));
     }
 }
+
+/**
+ * Dados
+ */
